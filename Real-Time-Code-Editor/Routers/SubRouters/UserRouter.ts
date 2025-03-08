@@ -1,5 +1,9 @@
 import {Router} from "express";
 import UserController from "../../Controller/UserController";
+import multer from "multer";
+
+const storage = multer.memoryStorage(); // Store files in memory (you can change it to disk storage)
+const upload = multer({ storage });
 class UserRouter{
     router :Router
     userController:UserController
@@ -11,7 +15,7 @@ class UserRouter{
     }
     initialRoutes():void{
             this.router.post('/signIn',this.userController.signIn)
-            this.router.post('/signUp',this.userController.signUp)
+            this.router.post('/signUp',upload.single('image'),this.userController.signUp)
     }
 
 }
