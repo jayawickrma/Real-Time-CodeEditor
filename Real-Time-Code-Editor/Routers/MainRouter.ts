@@ -5,6 +5,7 @@ class MainRouter{
 
     constructor() {
         this.router =Router()
+        this.router.use('/codeSnippet',)
     }
 }
 const mainRouter:MainRouter =new MainRouter()
