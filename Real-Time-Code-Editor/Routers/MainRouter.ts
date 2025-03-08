@@ -7,6 +7,7 @@ class MainRouter{
 
     constructor() {
         this.router =Router()
+        this.router.use('/health')
         this.router.use('/codeSnippet',codeSnippet.router)
         this.router.use('/activity')
         this.router.use('/auth',userRouter.router)
