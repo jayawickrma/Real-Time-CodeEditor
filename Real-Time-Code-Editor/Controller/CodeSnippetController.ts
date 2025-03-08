@@ -1,4 +1,4 @@
-export class CodeSnippetController{
+class CodeSnippetController{
     async pushCode(req:any,resp:any){
 
     }
@@ -14,3 +14,4 @@ export class CodeSnippetController{
 
     }
 }
+export default CodeSnippetController;

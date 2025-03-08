@@ -1,5 +1,5 @@
 import {Router} from "express";
-import {UserController} from "../../Controller/UserController";
+import UserController from "../../Controller/UserController";
 class UserRouter{
     router :Router
     userController:UserController
